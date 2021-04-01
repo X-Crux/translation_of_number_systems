@@ -1,5 +1,11 @@
 stages:
+  - build
   - test
+
+build-code-job:
+  stage: build
+  script:
+    - pip install pytest
 
 job 1:
   stage: test
