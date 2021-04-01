@@ -12,6 +12,8 @@ def from_10_to_2(out_not, in_num):
     while in_numb > 0:
         out_num = str(in_numb % out_ss) + out_num
         in_numb //= out_ss
+    if out_num == '':
+        out_num = '0'
     return out_num
 
 
