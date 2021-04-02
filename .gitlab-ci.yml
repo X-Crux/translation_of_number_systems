@@ -1,11 +1,13 @@
+image: python:3.9
+
 stages:
-  - build
   - test
 
-build-code-job:
-  stage: build
-  script:
-    - pip install pytest
+before_script:
+  # Установка окружения
+  - echo "Install environment"
+  - apt-get update -q -y
+  - pip3 install -r requirements.txt
 
 job 1:
   stage: test
