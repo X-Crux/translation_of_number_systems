@@ -5,6 +5,7 @@ stages:
 
 before_script:
   # Установка окружения
+  - CHCP 65001
   - echo "Install environment"
   - apt-get update -q -y
   - pip3 install -r requirements.txt
@@ -12,5 +13,4 @@ before_script:
 job 1:
   stage: test
   script:
-    - CHCP 65001
     - pytest .\tests\test.py -v
