@@ -10,12 +10,8 @@ stages:
 job 1:
   stage: test
   script:
-    - cd tests
-    - pytest test.py -v
-    - cd ../
-    - cd src
-    - pyinstaller --onefile main.py functions.py converter.py
-    - cd ../
+    - pytest ./tests/test.py -v
+    - pyinstaller --onefile ./src/main.py ./src/functions.py ./src/converter.py
   artifacts:
     paths:
-      - ./dist/main.exe
+      - ./src/dist/main.exe
