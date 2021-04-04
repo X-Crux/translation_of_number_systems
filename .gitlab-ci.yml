@@ -14,4 +14,4 @@ job 1:
     - ls -l
     - export PYTHONPATH="$PYTHONPATH:."
     - python -c "import sys;print(sys.path)"
-    - pytest .\tests\test.py -v
+    - pytest test.py -v
