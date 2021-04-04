@@ -7,6 +7,6 @@ job 1:
     - CHCP 65001
     - pwd
     - ls -l
-    - export PYTHONPATH="$PYTHONPATH:."
+    - python -m pytest
     - python -c "import sys; print (sys.path)"
     - pytest .\tests\test.py -v
