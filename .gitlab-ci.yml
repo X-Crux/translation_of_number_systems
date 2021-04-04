@@ -6,7 +6,5 @@ job 1:
   script:
     - CHCP 65001
     - pwd
-    - ls -l
     - python -m pytest
-    - python -c "import sys; print (sys.path)"
     - pytest .\tests\test.py -v
