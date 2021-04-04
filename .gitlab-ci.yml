@@ -1,24 +1,8 @@
-image: python:latest
+stages:
+  - test
 
-variables:
-  PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
-
-cache:
-  paths:
-    - .cache/pip
-    - venv/
-
-before_script:
-  - python -V  # Print out python version for debugging
-  - pip install virtualenv
-  - virtualenv venv
-  - source venv/bin/activate
-
-install_pytest:
+job 1:
+  stage: test
   script:
     - CHCP 65001
-    - pip install pytest
-
-run:
-  script:
-    - pytest .\tests\test.py -v
+    - DIR
