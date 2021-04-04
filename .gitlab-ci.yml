@@ -10,4 +10,8 @@ stages:
 job 1:
   stage: test
   script:
+    - pwd
+    - ls -l
+    - export PYTHONPATH="$PYTHONPATH:."
+    - python -c "import sys;print(sys.path)"
     - pytest .\tests\test.py -v
