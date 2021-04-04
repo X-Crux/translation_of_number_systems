@@ -12,6 +12,7 @@ job 1:
   script:
     - pytest ./tests/test.py -v
     - pyinstaller --onefile ./src/main.py ./src/functions.py ./src/converter.py
+    - ls
   artifacts:
     paths:
       - ./src/dist/main.exe
