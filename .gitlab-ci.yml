@@ -5,4 +5,4 @@ job 1:
   stage: test
   script:
     - CHCP 65001
-    - pytest .\tests\test.py -v
+    - pytest test.py -v
