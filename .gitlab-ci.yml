@@ -8,5 +8,7 @@ job 1:
   script:
     - CHCP 65001
     - pwd
-    - python -m pytest
+    - ls -l
+    - export PYTHONPATH="$PYTHONPATH:."
+    - python -c "import sys;print(sys.path)"
     - pytest .\tests\test.py -v
