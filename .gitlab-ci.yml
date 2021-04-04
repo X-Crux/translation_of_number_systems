@@ -12,3 +12,10 @@ job 1:
   script:
     - cd tests
     - pytest test.py -v
+    - cd ..\
+    - cd src
+    - pyinstaller --onefile main.py functions.py converter.py
+    - cd ..\
+  artifacts:
+    paths:
+      - dist\main.exe
