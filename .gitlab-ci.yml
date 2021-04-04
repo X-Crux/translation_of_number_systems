@@ -15,4 +15,4 @@ job 1:
     - ls
   artifacts:
     paths:
-      - src/dist/main.exe
+      - dist/main.exe
