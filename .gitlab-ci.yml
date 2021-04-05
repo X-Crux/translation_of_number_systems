@@ -14,4 +14,4 @@ job 1:
     - pyinstaller --onefile ./src/main.py
   artifacts:
     paths:
-      - dist/main.exe
+      - ./dist/main.exe
